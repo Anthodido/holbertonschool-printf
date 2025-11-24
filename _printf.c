@@ -2,17 +2,18 @@
 
 int _printf(const char *format, ...)
 {
-va_list liste;
-unsigned int i;
+	int i, count = 0;
 
-type_txt_t type[] = {
-	{"c", c_func},
-	{"s", s_func},
-	{"%", %_func},
-	{NULL, NULL},
-};
+	va_list liste;
 
-va_start(list, format);
+	if (format == NULL)
+		return (0);
 
-for (i = 0; i < format; i++)
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		_putchar(format[i]);
+		count++;
+	}
+
+	return (count);
 }
