@@ -9,11 +9,35 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (0);
 
+	va_start(liste, format);
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		_putchar(format[i]);
-		count++;
+		if (format[i] != '%')
+		{
+			_putchar(format[i]);
+			count++;
+		}
+		else
+		{
+			if (format[i + 1] == '%')
+			{
+				_putchar('%');
+				count++;
+				i++;
+			}
+			else if (format[i + 1] == 'c')
+			{
+
+			}
+			else if (format[i + 1] == 's')
+			{
+				
+			}
+		}
 	}
+
+	va_end(liste);
 
 	return (count);
 }
