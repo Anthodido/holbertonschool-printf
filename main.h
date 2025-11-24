@@ -7,5 +7,8 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int c_func(va_list liste);
+int s_func(va_list liste);
+int mod_func(va_list liste);
 
 #endif

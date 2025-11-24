@@ -7,6 +7,7 @@
  */
 int mod_func(va_list liste)
 {
+	(void)liste;
 	_putchar ('%');
 	return (1);
 }
