@@ -1,10 +1,10 @@
-#include <unistd.h>
+#include "main.h"
 /**
-* _putchar - ecrit un caractere variable c
+* _putchar - Ecrit un caractere variable c
 * @c: caractere to print
 * On error, -1
 */
 int _putchar(char c)
 {
-return (write(1, &c, 1));
+	return (write(1, &c, 1));
 }
