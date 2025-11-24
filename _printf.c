@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			int j, found == 0;
+			int j, found = 0;
 
 			for (j = 0; table[j].specifier != '\0'; j++)
 			{
