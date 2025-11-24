@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* c_func - Imprime un caractère passé en argument.
+* c_func - Fonction qui affiche un caractère passé en argument.
 * @liste: Liste d'arguments contenant le caractère à imprimer.
 *
 * Return: Le nombre de caractères imprimés (toujours 1).
