@@ -3,6 +3,8 @@
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
+	char c = 0;
+	char * str = 0;
 
 	va_list liste;
 
@@ -28,11 +30,13 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i + 1] == 'c')
 			{
-
+				count += c_func(liste);
+				i++;
 			}
 			else if (format[i + 1] == 's')
 			{
-				
+				count += s_func(liste);
+				i++;
 			}
 		}
 	}
