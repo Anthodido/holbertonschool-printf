@@ -3,8 +3,6 @@
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
-	char c = 0;
-	char * str = 0;
 
 	va_list liste;
 
