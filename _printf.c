@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - Réimplémentation simplifiée de printf
  * @format: chaîne de format à analyser et à afficher
@@ -13,6 +14,8 @@ format_func_t table[] = {
     {'c', c_func},
     {'s', s_func},
     {'%', mod_func},
+	{'d', d_func},
+	{'i', d_func},
     {'\0', NULL}
 };
 
