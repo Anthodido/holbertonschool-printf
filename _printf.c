@@ -1,8 +1,4 @@
 #include "main.h"
-<<<<<<< HEAD
-=======
-
->>>>>>> 92416ccbd1bc3a9d92c32fb982271fae8bdf5183
 /**
  * _printf - Réimplémentation simplifiée de printf
  * @format: chaîne de format à analyser et à afficher
@@ -13,12 +9,10 @@
  *
  * Retourne : le nombre de caractères affichés
  */
-<<<<<<< HEAD
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
-=======
->>>>>>> 92416ccbd1bc3a9d92c32fb982271fae8bdf5183
+
 format_func_t table[] = {
     {'c', c_func},
     {'s', s_func},
