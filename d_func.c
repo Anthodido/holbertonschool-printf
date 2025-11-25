@@ -17,7 +17,7 @@ int d_func(va_list liste)
 	char buffer[11];
 	int ind = 0;
 	unsigned int digit;
-	
+
 	n = va_arg(liste, int);
 	if (n == 0)
 	{

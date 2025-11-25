@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* u_func - Fonction qui affiche un entier non signé 
+* u_func - Fonction qui affiche un entier non signé.
 * @liste: Liste d'arguments variadiques contenant l'entier à imprimer.
 *
 * Cette fonction récupère un int non signé via va_arg
