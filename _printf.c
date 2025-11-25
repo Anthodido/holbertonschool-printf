@@ -7,25 +7,26 @@
  * des fonctions lié à (%c, %s, %%), grâce à une table de pointeurs
  * de fonction soit les caractères tels quels
  *
- * Retourne : le nombre de caractères affichés
+ * Return: le nombre de caractères affichés
  */
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
-format_func_t table[] = {
-	{'c', c_func},
-	{'s', s_func},
-	{'%', mod_func},
-	{'d', d_func},
-	{'i', d_func},
-	{'b', b_func},
-	{'u', u_func},
-	{'\0', NULL}
-};
 	va_list liste;
 
+	format_func_t table[] = {
+		{'c', c_func},
+		{'s', s_func},
+		{'%', mod_func},
+		{'d', d_func},
+		{'i', d_func},
+		{'b', b_func},
+		{'u', u_func},
+		{'\0', NULL}
+	};
+
 	if (format == NULL)
-		return (0);
+		return (-1);
 
 	va_start(liste, format);
 	for (i = 0; format[i] != '\0'; i++)
