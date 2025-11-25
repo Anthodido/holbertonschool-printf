@@ -26,5 +26,6 @@ int mod_func(va_list liste);
 int d_func(va_list liste);
 int b_func(va_list liste);
 int u_func(va_list liste);
+int x_func(va_list liste);
 
 #endif
