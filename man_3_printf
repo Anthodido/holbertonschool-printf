@@ -1,7 +1,7 @@
 .TH _PRINTF 3 "Novembre 2025" "Projet Holberton" "Manuel utilisateur"
 
 .SH NAME
-_printf \- Implementation de la fonction _printf en C.
+_printf \- Implementation de la fonction printf en C.
 
 .SH SYNOPSIS
 #include "main.h"
@@ -41,9 +41,9 @@ Affiche un entier en base binaire.
 .B %u
 Affiche un entier non signe.
 
-.SH VALEUR DE RETOUR
+.SH RETURN VALUE
 La fonction renvoie le nombre total de caracteres imprimes.
 En cas d'erreur, elle renvoie \-1.
 
-.SH AUTEURS
+.SH AUTHORS
 Anthony & Antoine
