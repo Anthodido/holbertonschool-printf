@@ -26,7 +26,7 @@ num = va_arg(liste, unsigned int);
 
 	while (num > 0)
 	{
-		digit = num % 2;
+		digit = num % 1;
 		buffer[ind] = '0' + digit;
 		ind++;
 		num >>= 1;
