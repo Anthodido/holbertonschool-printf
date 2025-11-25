@@ -19,9 +19,6 @@ int p_func(va_list liste)
 
 	ptr = va_arg(liste, void *);
 
-	if (ptr == NULL)
-		return ();
-
 	_putchar('0');
 	_putchar('x');
 	count += 2;
