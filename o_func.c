@@ -6,7 +6,7 @@
 *
 *
 */
-int u_func(va_list liste)
+int o_func(va_list liste)
 {
 	unsigned int digit, n = 0;
 	int count = 0, ind = 0;

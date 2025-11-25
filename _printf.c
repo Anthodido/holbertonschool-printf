@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{'i', d_func},
 		{'b', b_func},
 		{'u', u_func},
+		{'o', o_func},
 		{'\0', NULL}
 	};
 
