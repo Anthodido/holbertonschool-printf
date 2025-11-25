@@ -1,5 +1,14 @@
 #include "main.h"
-
+/**
+ * _printf - Réimplémentation simplifiée de printf
+ * @format: chaîne de format à analyser et à afficher
+ *
+ * Description: Parcourt la chaine format et affiche soit le résultat   	
+ * des fonctions lié à (%c, %s, %%), grâce à une table de pointeurs 
+ * de fonction soit les caractères tels quels 
+ *
+ * Retourne : le nombre de caractères affichés
+ */
 typedef struct format_func
 {
     char specifier;
