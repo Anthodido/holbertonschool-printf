@@ -43,7 +43,7 @@ Affiche un entier non signe.
 
 .SH VALEUR DE RETOUR
 La fonction renvoie le nombre total de caracteres imprimes.
-En cas d'erreur, elle renvoie 0.
+En cas d'erreur, elle renvoie \-1.
 
 .SH AUTEURS
 Anthony & Antoine
