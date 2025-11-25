@@ -1,16 +1,15 @@
-.TH _PRINTF 3 "Novembre 2025" "Projet Holberton" "Manuel d'utilisateur"
+.TH _PRINTF 3 "Novembre 2025" "Projet Holberton" "Manuel utilisateur"
 
 .SH NAME
 _printf \- Implementation de la fonction _printf en C.
 
-.SH SYSNOPSIS
+.SH SYNOPSIS
 #include "main.h"
 
 int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-La fonction _printf permet d'afficher une chaine de caracteres.
-C'est une version simplifiee de la fonction standard printf.
+La fonction _printf permet dafficher une chaine de caracteres. C'est une version simplifiee de la fonction standard printf.
 
 Les specificateurs pris en charge sont :
 
