@@ -1,15 +1,21 @@
 #include "main.h"
 
-typedef struct format_func
-{
-    char specifier;
-    int (*func)(va_list);
-} format_func_t;
-
+/**
+ * _printf - Réimplémentation simplifiée de printf
+ * @format: chaîne de format à analyser et à afficher
+ *
+ * Description: Parcourt la chaine format et affiche soit le résultat       
+ * des fonctions lié à (%c, %s, %%), grâce à une table de pointeurs 
+ * de fonction soit les caractères tels quels 
+ *
+ * Retourne : le nombre de caractères affichés
+ */
 format_func_t table[] = {
     {'c', c_func},
     {'s', s_func},
     {'%', mod_func},
+	{'d', d_func},
+	{'i', d_func},
     {'\0', NULL}
 };
 
