@@ -32,26 +32,28 @@ format_func_t table[] = {
 	{
 		if (format[i] == '%')
 		{
-			_putchar(format[i]);
-			count++;
-		}
-		else
-		{
-			if (format[i + 1] == '%')
+			int j, found = 0;
+
+			for (j = 0; table[j].specifier != '\0'; j++)
+			{
+				if (format[i + 1] == table[j].specifier)
+				{
+					count += table[j].func(liste);
+					i++;
+					found = 1;
+					break;
+				}
+			}
+			if (!found)
 			{
 				_putchar('%');
 				count++;
 			}
-			else if (format[i + 1] == 'c')
-			{
-				count += c_func(liste);
-				i++;
-			}
-			else if (format[i + 1] == 's')
-			{
-				count += s_func(liste);
-				i++;
-			}
+		}
+		else
+		{
+			_putchar (format[i]);
+			count++;
 		}
 	}
 	va_end(liste);
