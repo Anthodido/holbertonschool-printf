@@ -1,15 +1,15 @@
 #include "main.h"
 /**
- * d_func - Affiche un entier signé (%d et %i).
- * @liste: Liste des arguments variadiques contenant l'entier à afficher.
- *
- * Cette fonction récupère un entier, gère les valeurs négatives,
- * convertit le nombre en caractères un par un, puis les affiche
- * via _putchar. Les chiffres sont stockés temporairement dans un buffer
- * afin d'être réaffichés dans le bon ordre.
- *
- * Return: Le nombre total de caractères imprimés.
- */
+* d_func - Fonction qui affiche un entier signé (%d et %i).
+* @liste: Liste d'arguments variadiques contenant l'entier à imprimer.
+*
+* Cette fonction récupère un int via va_arg, gère les valeurs
+* négatives, puis convertit chaque chiffre pour l'afficher avec _putchar.
+* Les chiffres sont stockés temporairement dans un buffer
+* afin d'être réaffichés dans le bon ordre.
+*
+* Return: Nombre de caractères imprimés.
+*/
 int d_func(va_list liste)
 {
 	int n, count = 0;

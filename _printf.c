@@ -1,15 +1,11 @@
 #include "main.h"
 
-typedef struct format_func
-{
-    char specifier;
-    int (*func)(va_list);
-} format_func_t;
-
 format_func_t table[] = {
     {'c', c_func},
     {'s', s_func},
     {'%', mod_func},
+	{'d', d_func},
+	{'i', d_func},
     {'\0', NULL}
 };
 
