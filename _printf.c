@@ -4,12 +4,15 @@
  * _printf - Réimplémentation simplifiée de printf
  * @format: chaîne de format à analyser et à afficher
  *
- * Description: Parcourt la chaine format et affiche soit le résultat       
- * des fonctions lié à (%c, %s, %%), grâce à une table de pointeurs 
- * de fonction soit les caractères tels quels 
+ * Description: Parcourt la chaine format et affiche soit le résultat
+ * des fonctions lié à (%c, %s, %%), grâce à une table de pointeurs
+ * de fonction soit les caractères tels quels
  *
  * Retourne : le nombre de caractères affichés
  */
+int _printf(const char *format, ...)
+{
+	int i, count = 0;
 format_func_t table[] = {
     {'c', c_func},
     {'s', s_func},
@@ -20,18 +23,12 @@ format_func_t table[] = {
 	{'u', u_func},
     {'\0', NULL}
 };
-
-int _printf(const char *format, ...)
-{
-	int i, count = 0;
-
 	va_list liste;
 
 	if (format == NULL)
 		return (0);
 
 	va_start(liste, format);
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -43,13 +40,12 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == table[j].specifier)
 				{
 					count += table[j].func(liste);
-                    i++;
-                    found = 1;
-                    break;
+					i++;
+					found = 1;
+					break;
 				}
 			}
-
-			if(!found)
+			if (!found)
 			{
 				_putchar('%');
 				count++;
@@ -57,12 +53,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]);
-            count++;
+			_putchar (format[i]);
+			count++;
 		}
 	}
-
 	va_end(liste);
-
 	return (count);
 }
