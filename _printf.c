@@ -1,14 +1,4 @@
 #include "main.h"
-format_func_t table[] = {
-    {'c', c_func},
-    {'s', s_func},
-    {'%', mod_func},
-	{'d', d_func},
-	{'i', d_func},
-	{'b', b_func},
-	{'u', u_func},
-    {'\0', NULL}
-};
 /**
  * _printf - Réimplémentation simplifiée de printf
  * @format: chaîne de format à analyser et à afficher
@@ -22,6 +12,16 @@ format_func_t table[] = {
 int _printf(const char *format, ...)
 {
 	int i, count = 0;
+format_func_t table[] = {
+	{'c', c_func},
+	{'s', s_func},
+	{'%', mod_func},
+	{'d', d_func},
+	{'i', d_func},
+	{'b', b_func},
+	{'u', u_func},
+	{'\0', NULL}
+};
 	va_list liste;
 
 	if (format == NULL)
