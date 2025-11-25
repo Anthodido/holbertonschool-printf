@@ -16,6 +16,7 @@ format_func_t table[] = {
     {'%', mod_func},
 	{'d', d_func},
 	{'i', d_func},
+	{'b', b_func},
     {'\0', NULL}
 };
 
