@@ -1,7 +1,10 @@
 #include "main.h"
 /**
-* c_func - Fonction qui affiche un caractère passé en argument.
-* @liste: Liste d'arguments contenant le caractère à imprimer.
+* c_func - Fonction qui affiche un caractère.
+* @liste: Liste d'arguments variadiques contenant le caractère à imprimer.
+*
+* Cette fonction récupère un caractère via va_arg
+* puis l'affiche avec _putchar.
 *
 * Return: Le nombre de caractères imprimés (toujours 1).
 */

@@ -1,0 +1,50 @@
+.TH _PRINTF 3 "Novembre 2025" "Projet Holberton" "Manuel d'utilisateur"
+
+.SH NAME
+_printf \- Implementation de la fonction _printf en C.
+
+.SH SYSNOPSIS
+#include "main.h"
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+La fonction _printf permet d'afficher une chaine de caracteres.
+C'est une version simplifiee de la fonction standard printf.
+
+Les specificateurs pris en charge sont :
+
+.TP
+.B %c
+Affiche un caractere.
+
+.TP
+.B %s
+Affiche une chaine de caracteres.
+
+.TP
+.B %%
+Affiche un seul '%'.
+
+.TP
+.B %d
+Affiche un entier decimal signe.
+
+.TP
+.B %i
+Affiche un entier signe.
+
+.TP
+.B %b
+Affiche un entier en base binaire.
+
+.TP
+.B %u
+Affiche un entier non signe.
+
+.SH VALEUR DE RETOUR
+La fonction renvoie le nombre total de caracteres imprimes.
+En cas d'erreur, elle renvoie 0.
+
+.SH AUTEURS
+Anthony & Antoine

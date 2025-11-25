@@ -1,8 +1,9 @@
 #include "main.h"
 /**
-* _putchar - Ecrit un caractere variable c
-* @c: caractere to print
-* On error, -1
+* _putchar - Écrit un caractere variable c.
+* @c: Le caractère à imprimer.
+*
+* Return: 1 si succès, -1 si erreur.
 */
 int _putchar(char c)
 {
