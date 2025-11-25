@@ -16,5 +16,5 @@ int c_func(va_list liste)
 
 	_putchar(c);
 
-	return(1);
+	return (1);
 }
