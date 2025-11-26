@@ -17,7 +17,7 @@ int s_func(va_list liste)
 
 	if (str == NULL)
 	{
-		str = "(NULL)";
+		str = "(null)";
 	}
 
 	while (str[i] != '\0')
