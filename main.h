@@ -14,8 +14,8 @@
 */
 typedef struct format_func
 {
-    char specifier;
-    int (*func)(va_list);
+	char specifier;
+	int (*func)(va_list);
 } format_func_t;
 
 int _putchar(char c);
