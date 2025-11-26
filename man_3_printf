@@ -9,8 +9,15 @@ _printf \- Implementation de la fonction printf en C.
 int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-La fonction _printf permet d'afficher une chaine de caracteres.
+La fonction _printf produit une sortie formatee sur la sortie standard
+par rapport a une chaine de format qui specifie comment les arguments
+doivent etre convertis pour l'affichage.
 C'est une version simplifiee de la fonction standard printf.
+
+.SS Specificateurs de conversion
+Un specificateur de conversion est introduit par le caractere %
+suivi d'un caractere de conversion qui specifie le type de conversion
+a appliquer.
 
 Les specificateurs pris en charge sont :
 
@@ -27,24 +34,77 @@ Affiche une chaine de caracteres.
 Affiche un seul '%'.
 
 .TP
-.B %d
+.B %d, %i
 Affiche un entier decimal signe.
 
-.TP
-.B %i
-Affiche un entier signe.
 
 .TP
 .B %b
-Affiche un entier en base binaire.
+Affiche un entier en notation binaire.
 
 .TP
 .B %u
-Affiche un entier non signe.
+Affiche un entier decimal non signe.
+
+.TP
+.B %o
+Affiche un entier en notation octale non signee.
+
+.TP
+.B %x
+Affiche un entier en notation hexadecimale non signee (lettres minuscules).
+
+.TP
+.B %X
+Affiche un entier en notation hexadecimale non signee (lettres majuscules).
+
+.TP
+.B %p
+Affiche une adresse de pointeur.
 
 .SH RETURN VALUE
-La fonction renvoie le nombre total de caracteres imprimes.
+La fonction renvoie le nombre de caracteres affiches (excluant l'octet null).
 En cas d'erreur, elle renvoie \-1.
 
+.SH EXAMPLES
+.nf
+#include "main.h"
+
+int main(void)
+{
+    _printf("Hello, %s!\\n", "World");
+    _printf("Le nombre est %d\\n", 42);
+    _printf("Adresse: %p\\n", &main);
+    _printf("Hexadecimal: %x\\n", 255);
+    _printf("Binaire: %b\\n", 10);
+    return (0);
+}
+.fi
+
+.SH NOTES
+Cette implementation ne gere pas :
+.IP \(bu 2
+Les flags
+.BR + ,
+.BR \- ,
+.BR # ,
+.BR 0 ,
+et espace
+.IP \(bu
+La largeur de champ
+.IP \(bu
+La precision
+.IP \(bu
+Les modificateurs de longueur
+.RB ( l ,
+.BR h ,
+.BR ll ,
+etc.)
+.IP \(bu
+Les nombres a virgule flottante
+.RB ( %f ,
+.BR %e ,
+.BR %g )
+
 .SH AUTHORS
-Anthony & Antoine
+Anthony, Lucas & Antoine.
