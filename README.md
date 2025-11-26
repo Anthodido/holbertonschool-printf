@@ -115,5 +115,9 @@ Cette implémentation ne gère pas encore :
 
 Ces fonctionnalités seront ajoutées dans les prochaines versions.
 
+## 🧭 Flowchart
+
+<img width="3415" height="1305" alt="Untitled diagram-2025-11-26-142708" src="https://github.com/user-attachments/assets/4d5d8c11-578e-416d-b624-5a8fc85eba01" />
+
 ## 🤝 Auteurs
 Ce projet a été réalisé en collaboration par [Anthony](https://github.com/Anthodido), [Lucas](https://github.com/lucasscianna) & [Antoine](https://github.com/add1ktion).
