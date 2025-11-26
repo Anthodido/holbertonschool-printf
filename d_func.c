@@ -21,13 +21,13 @@ int d_func(va_list liste)
 	n = va_arg(liste, int);
 	if (n == 0)
 	{
-		_putchar ('0');
+		_putchar('0');
 		return (1);
 	}
 
 	if (n < 0)
 	{
-		_putchar ('-');
+		_putchar('-');
 		count++;
 		num = -n;
 	}
@@ -47,7 +47,7 @@ int d_func(va_list liste)
 	while (ind > 0)
 	{
 		ind--;
-		_putchar (buffer[ind]);
+		_putchar(buffer[ind]);
 		count++;
 	}
 

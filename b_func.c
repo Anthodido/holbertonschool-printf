@@ -26,10 +26,10 @@ num = va_arg(liste, unsigned int);
 
 	while (num > 0)
 	{
-		digit = num % 1;
+		digit = num % 2;
 		buffer[ind] = '0' + digit;
 		ind++;
-		num >>= 1;
+		num = num / 2;
 	}
 
 	while (ind > 0)

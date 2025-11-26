@@ -18,7 +18,10 @@ int X_func(va_list liste)
 	int i = 0;
 
 	if (n == 0)
-		return (_putchar('0'));
+	{
+		_putchar('0');
+		return (1);
+	}
 
 	while (n > 0)
 	{
@@ -28,7 +31,9 @@ int X_func(va_list liste)
 
 	i--;
 	while (i >= 0)
+	{
 		count += _putchar(buffer[i--]);
+	}
 
 	return (count);
 }

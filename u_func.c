@@ -34,7 +34,7 @@ int u_func(va_list liste)
 	while (ind > 0)
 	{
 		ind--;
-		_putchar (buffer[ind]);
+		_putchar(buffer[ind]);
 		count++;
 	}
 

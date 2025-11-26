@@ -41,7 +41,10 @@ int _printf(const char *format, ...)
 			int j, found = 0;
 
 			if (format[i + 1] == '\0')
+			{
+				va_end(liste);
 				return (-1);
+			}
 
 			for (j = 0; table[j].specifier != '\0'; j++)
 			{
@@ -63,10 +66,10 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar (format[i]);
+			_putchar(format[i]);
 			count++;
 		}
 	}
-	va_end(liste);
 	return (count);
+	va_end(liste);
 }
