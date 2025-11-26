@@ -11,6 +11,6 @@
 int mod_func(va_list liste)
 {
 	(void)liste;
-	_putchar ('%');
+	_putchar('%');
 	return (1);
 }
