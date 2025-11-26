@@ -30,5 +30,6 @@ int o_func(va_list liste);
 int x_func(va_list liste);
 int X_func(va_list liste);
 int p_func(va_list liste);
+int S_func(va_list liste);
 
 #endif
