@@ -39,6 +39,9 @@ int _printf(const char *format, ...)
 		{
 			int j, found = 0;
 
+			if (format[i + 1] == '\0')
+				return (-1);
+
 			for (j = 0; table[j].specifier != '\0'; j++)
 			{
 				if (format[i + 1] == table[j].specifier)
@@ -51,10 +54,10 @@ int _printf(const char *format, ...)
 			}
 			if (!found)
 			{
-				if (format[i + 1] == '\0')
-					return (-1);
 				_putchar('%');
-				count++;
+				_putchar(format[i + 1]);
+				count += 2;
+				i++;
 			}
 		}
 		else
