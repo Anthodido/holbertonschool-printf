@@ -26,6 +26,7 @@ int _printf(const char *format, ...)
 		{'x', x_func},
 		{'X', X_func},
 		{'p', p_func},
+		{'S', S_func},
 		{'\0', NULL}
 	};
 
